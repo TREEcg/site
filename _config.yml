@@ -34,6 +34,14 @@ source: "pages"
 ldes_pages:
   - title: TREE
     location: /
+ldes_external:
+  - title: Specification
+    location: https://w3id.org/ldes/specification
+  - title: Chat room
+    location: https://matrix.to/#/#ldes:chat.semantic.works
+  - title: YouTube
+    location: https://www.youtube.com/playlist?list=PLRBOTYR9bOiibSZUv8_qCLWuJcv840dSk
+
 tree_pages:
   - title: LDES
     location: /linked-data-event-streams
@@ -45,6 +53,11 @@ tree_pages:
     location: /publications
   - title: Try live
     location: /demo
+tree_external:
+  - title: YouTube
+    location: https://www.youtube.com/playlist?list=PLRBOTYR9bOiibSZUv8_qCLWuJcv840dSk
+  - title: Github
+    location: https://github.com/treecg
   # - title: Getting Started
   #   location: getting-started
   # - title: Publications

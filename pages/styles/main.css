@@ -274,16 +274,17 @@ nav ul li:hover *, nav ul li.active * {
   border-radius: 20px;
 }
 
-h1::before {
-  content: "TREE | ";
+h1.ldes::before, h1.tree::before {
   color: var(--sec);
   font-weight: lighter;
 }
 
-h1::before.ldes {
+h1.tree::before {
+  content: "TREE | ";
+}
+
+h1.ldes::before {
   content: "LDES | ";
-  color: var(--sec);
-  font-weight: lighter;
 }
 
 
@@ -300,7 +301,7 @@ h1 {
   margin: 0.5em 0 0.2em -1px;
 }
 
-.publication .title, .publication .authors, .publication .venue {
+.publication .title, .publication .authors, .publication .venue, .blog-entry .title {
   display: block;
 }
 
@@ -316,7 +317,7 @@ ul + ul {
   font-size: 1.2em;
 
 }
-.publication + .publication,.per-year + .per-year  {
+.publication + .publication,.per-year + .per-year, .blog-entry + .blog-entry  {
   margin-top: 20px;
 }
 
@@ -340,7 +341,7 @@ ul + ul {
   text-transform: capitalize;
 }
 
-.publication::before, .specification > h2::before, .software > h2::before {
+.publication::before, .specification > h2::before, .software > h2::before,.blog-entry .title::before  {
   content: "■ ";
   color: var(--prim);
   position: absolute;
@@ -351,7 +352,12 @@ ul + ul {
   content: "❖ ";
 }
 
-.publication a {
+.blog-entry .title::before {
+  content: "⬢ ";
+  margin: -1px -1.2em;
+}
+
+.publication a, .blog-entry a {
   text-decoration: none;
 }
 
@@ -360,10 +366,24 @@ ul + ul {
   color: var(--sec);
 }
 
-.publication > :not(.title) {
+.publication > :not(.title), .blog-entry > :not(.title) {
   font-size: .9em;
 }
 
-.publication .authors {
+.publication .authors, .blog-entry .authors {
   font-style: italic;
 }
+
+.blog-entry .tags {
+  display: inline-block;
+}
+
+.blog-entry .authors {
+  display: inline-block;
+  float: right;
+}
+
+.tag + .tag::before {
+  content: ' - '
+}
+
